@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey_link"
+    android:descendantFocusability="blocksDescendants"
+    android:id="@+id/blog_item_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/blog_rl_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp">
+        <LinearLayout
+            android:id="@+id/blog_ll_it"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
+            <include layout="@layout/item_blog_top" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="13dp">
+                <include layout="@layout/item_blog_header"/>
+
+                <include layout="@layout/item_blog_content" />
+
+                <include layout="@layout/item_blog_nine"/>
+
+                <include layout="@layout/item_blog_video"/>
+
+                <include layout="@layout/item_blog_vote"/>
+
+                <include layout="@layout/item_blog_location"/>
+
+                <include layout="@layout/item_blog_comment"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/grey_link"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <include layout="@layout/item_blog_opreat"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/blog_ivhot"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

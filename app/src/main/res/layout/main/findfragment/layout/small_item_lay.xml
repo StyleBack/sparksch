@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="99dp">
+
+    <LinearLayout
+        android:id="@+id/small_llparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/smi_iv_icon"
+            android:layout_width="24dp"
+            android:layout_height="22dp"
+            />
+        <TextView
+            android:id="@+id/smi_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/title_color"
+            android:layout_marginTop="5dp"
+            />
+    </LinearLayout>
+</RelativeLayout>

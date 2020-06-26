@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/aii_rlp"
+        android:layout_width="122dp"
+        android:layout_height="122dp"
+        android:layout_marginRight="5dp"
+        android:visibility="gone">
+        <com.doschool.ahu.widget.XImageViewRoundOval
+            android:id="@+id/aii_ivh"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:scaleType="centerCrop"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" />
+        <ImageView
+            android:id="@+id/aii_idel"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:padding="3dp"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:src="@mipmap/box_delet_icon"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/ai_virl"
+        android:layout_width="129dp"
+        android:layout_height="221dp"
+        android:visibility="gone">
+        <com.doschool.ahu.widget.XImageViewRoundOval
+            android:id="@+id/ai_vihp"
+            android:layout_width="119dp"
+            android:layout_height="211dp"
+            android:scaleType="centerCrop"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"/>
+        <ImageView
+            android:id="@+id/ai_viel"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:padding="3dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/box_delet_icon"/>
+    </RelativeLayout>
+</RelativeLayout>

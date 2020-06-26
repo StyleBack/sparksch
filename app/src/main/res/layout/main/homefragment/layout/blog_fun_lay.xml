@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/fun_report"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="15sp"
+            android:textColor="@color/tab_count"
+            android:gravity="center"
+            android:text="举报"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey_link"/>
+        <TextView
+            android:id="@+id/fun_coll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="15sp"
+            android:textColor="@color/title_color"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="收藏"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fun_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="15sp"
+        android:textColor="@color/un_title_color"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:text="取消"/>
+</LinearLayout>

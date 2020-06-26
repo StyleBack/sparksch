@@ -1,0 +1,219 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="txt_inputType" translatable="false">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="txt_phone" translatable="false">0123456789</string>
+
+    <!--message-->
+    <string name="summary_image" translatable="false">[图片]</string>
+    <string name="summary_voice" translatable="false">[语音]</string>
+    <string name="summary_video" translatable="false">[小视频]</string>
+    <string name="summary_file" translatable="false">[文件]</string>
+    <string name="summary_group_admin_change" translatable="false">管理员变更</string>
+    <string name="summary_group_info_change" translatable="false">群资料变更</string>
+    <string name="summary_group_mem_change" translatable="false">群成员变更</string>
+    <string name="summary_group_mem_add" translatable="false">加入群</string>
+    <string name="summary_group_mem_quit" translatable="false">退出群</string>
+    <string name="summary_group_mem_kick" translatable="false">被踢出群</string>
+    <string name="summary_group_mem_modify" translatable="false">资料变更</string>
+
+    <string name="save_fail" translatable="false">保存失败</string>
+    <string name="save_exist" translatable="false">文件已存在</string>
+    <string name="save_succ" translatable="false">保存成功</string>
+    <string name="downloading" translatable="false">正在下载，请稍候</string>
+    <string name="download_fail" translatable="false">下载失败</string>
+    <string name="file_not_found" translatable="false">未找到文件，请稍后重试</string>
+
+
+    <string name="chat_up_finger" translatable="false">手指上滑，取消发送</string>
+    <string name="chat_press_talk" translatable="false">按住 说话</string>
+    <string name="chat_release_send" translatable="false">松开 结束</string>
+    <string name="chat_image" translatable="false">图片</string>
+    <string name="chat_file" translatable="false">文件</string>
+    <string name="chat_photo" translatable="false">拍摄</string>
+    <string name="chat_video" translatable="false">小视频</string>
+    <string name="chat_audio_too_short" translatable="false">录音过短，请重试</string>
+    <string name="chat_video_too_short" translatable="false">录制过短，请重试</string>
+    <string name="chat_audio_too_long" translatable="false">录音过长，请重试</string>
+
+    <!-- conversation fragment -->
+    <string name="conversation_system" translatable="false">系统消息</string>
+    <string name="conversation_system_friend" translatable="false">新朋友</string>
+    <string name="conversation_system_group" translatable="false">群组消息</string>
+    <string name="conversation_del" translatable="false">删除会话</string>
+    <string name="conversation_draft" translatable="false">[草稿]</string>
+    <string name="default_group_name" translatable="false">默认分组</string>
+    <string name="public_group" translatable="false">公开群</string>
+    <string name="discuss_group" translatable="false">讨论组</string>
+    <string name="chatroom" translatable="false">聊天室</string>
+    <string name="profile_del" translatable="false">删除好友</string>
+    <string name="profile_chat" translatable="false">发送消息</string>
+    <string name="profile_remark" translatable="false">备注名</string>
+    <string name="profile_black" translatable="false">加入黑名单</string>
+    <string name="profile_now_group" translatable="false">所在分组</string>
+    <string name="profile_detail" translatable="false">详细资料</string>
+    <string name="profile_remark_edit" translatable="false">修改备注</string>
+    <string name="profile_black_succ" translatable="false">加入黑名单成功</string>
+    <string name="profile_del_succeed" translatable="false">删除好友成功</string>
+    <string name="profile_del_fail" translatable="false">删除好友失败</string>
+    <string name="change_group_error" translatable="false">修改分组失败</string>
+    <string name="title_addfri" translatable="false">添加好友</string>
+    <string name="profile_id" translatable="false">账号</string>
+    <string name="add_detail_name" translatable="false">备注名</string>
+    <string name="add_detail_group" translatable="false">分组</string>
+    <string name="add_detail_message" translatable="false">附加消息</string>
+    <string name="add_friend_send" translatable="false">发送添加好友请求</string>
+    <string name="confirm" translatable="false">确定</string>
+    <string name="cancel" translatable="false">取消</string>
+    <string name="reconfirm" translatable="false">重新登录</string>
+    <string name="add_friend_succeed" translatable="false">请求已发送</string>
+    <string name="add_friend_added" translatable="false">已添加好友</string>
+    <string name="add_friend_refuse_all" translatable="false">对方拒绝添加任何人为好友</string>
+    <string name="add_friend_to_blacklist" translatable="false">我在对方的黑名单中</string>
+    <string name="add_friend_error" translatable="false">添加好友失败，请稍后重试</string>
+    <string name="add_friend_del_black_list" translatable="false">添加失败，该用户在你的黑名单中，是否将该用户从黑名单中移除（你需要在移除成功后重发添加好友请求）</string>
+    <string name="add_friend_del_black_err" translatable="false">移出黑名单失败</string>
+    <string name="add_friend_del_black_succ" translatable="false">移出黑名单成功</string>
+    <string name="profile_back" translatable="false">返回</string>
+    <string name="edit_error" translatable="false">修改失败</string>
+    <string name="chat_typing" translatable="false">对方正在输入…</string>
+    <string name="chat_content_bad" translatable="false">内容含有敏感词</string>
+
+    <string name="chat_resend" translatable="false">重新发送</string>
+    <string name="chat_pullback" translatable="false">撤回</string>
+    <string name="chat_pullback_not_support" translatable="false">该会话不支持消息撤回</string>
+    <string name="chat_del" translatable="false">删除</string>
+    <string name="chat_save" translatable="false">保存</string>
+    <string name="chat_copy" translatable="false">复制</string>
+    <string name="summary_friend_add" translatable="false">请求添加好友</string>
+    <string name="summary_friend_added" translatable="false">我已添加</string>
+    <string name="summary_friend_add_me" translatable="false">请求添加</string>
+    <string name="summary_friend_recommend" translatable="false">推荐添加</string>
+    <string name="summary_me" translatable="false">我</string>
+    <string name="home_conversation_tab" translatable="false">会话</string>
+    <string name="tls_expire" translatable="false">账号登录已过期，请重新登录</string>
+    <string name="login_error" translatable="false">登录失败，请稍后重试</string>
+    <string name="login_error_timeout" translatable="false">登录失败，当前无网络</string>
+    <string name="login_succ" translatable="false">登录成功</string>
+    <string name="kick_logout" translatable="false">你的账号已在其他终端登录,重新登录</string>
+
+    <string name="chat_file_too_large" translatable="false">文件过大，发送失败</string>
+    <string name="chat_file_not_exist" translatable="false">文件不存在，发送失败</string>
+    <string name="chat_image_preview_title" translatable="false">图片预览</string>
+    <string name="chat_image_preview_send" translatable="false">发送</string>
+    <string name="chat_image_preview_ori" translatable="false">原图发送</string>
+    <string name="chat_image_preview_load_err" translatable="false">图片加载失败</string>
+
+    <!-- time -->
+    <string name="time_yesterday" translatable="false">昨天</string>
+    <string name="time_day" tools:ignore="MissingTranslation">日</string>
+    <string name="time_month" translatable="false">月</string>
+    <string name="time_year" translatable="false">年</string>
+    <string name="time_more" translatable="false">99+</string>
+
+    <!--sql-->
+    <string name="strExecute" translatable="false">执行SQL</string>
+    <string name="strAdd" translatable="false">新增</string>
+    <string name="strDelete" translatable="false">删除</string>
+    <string name="strUpdate" translatable="false">修改</string>
+    <string name="strQuery1" translatable="false">数据查询</string>
+    <string name="strQuery2" translatable="false">统计查询</string>
+    <string name="strQuery3" translatable="false">比较查询</string>
+    <string name="strInputSqlHint" translatable="false">update Orders set OrderPrice = 100 where Id = 6</string>
+    <string name="strInputSql" translatable="false">请输入SQL语句</string>
+    <string name="strErrorSql" translatable="false">执行出错，请检查SQL语句</string>
+    <string name="strSuccessSql" translatable="false">执行SQL语句成功</string>
+    <string name="strUnableSql" translatable="false">Sorry，还没处理select语句</string>
+
+    <!--tab名称-->
+    <string name="tab_gc" translatable="false">广场</string>
+    <string name="tab_gt" translatable="false">消息</string>
+    <string name="tab_fw" translatable="false">发现</string>
+    <string name="tab_me" translatable="false">我的</string>
+
+    <!--网络提示-->
+    <string name="unnetwork" translatable="false">您可能处于离线，请连接网络</string>
+    <string name="disconnect_work" translatable="false">网络不可用，请重新链接</string>
+    <string name="error_network" translatable="false">网络错误</string>
+
+
+    <string name="blog_fixed_top" translatable="false">评论了该条动态</string>
+    <string name="blog_xdj_top" translatable="false">新动静</string>
+    <string name="em_time" translatable="false">00:00</string>
+    <string name="placeholder_tx" translatable="false">Empty</string>
+    <string name="ehint_txt" translatable="false">搜索用户、动态、话题</string>
+    <string name="acd_login_name" translatable="false">请输入你的学号</string>
+    <string name="acd_login_pwd" translatable="false">请输入你的密码</string>
+    <string name="login_hint_name" translatable="false">请输入手机号</string>
+    <string name="login_hint_pwd" translatable="false">请输入验证码</string>
+    <string name="nu_tx_yam" translatable="false">没收到验证码？</string>
+    <string name="acd_tv_st" translatable="false">如果忘记密码请使用手机验证码登录</string>
+    <string name="login_ts_reg" translatable="false">两秒注册</string>
+    <string name="loging_lost_pwd" translatable="false">忘记密码</string>
+    <string name="login_tx_click" translatable="false">发送验证码</string>
+    <string name="comfir_text" translatable="false">安大教务系统（需验证码）</string>
+    <string name="fir_stuid" translatable="false">请输入学号</string>
+    <string name="fir_schpwd" translatable="false">请输入你的教务密码</string>
+    <string name="fir_yz" translatable="false">请输入验证码</string>
+    <string name="fir_msg" translatable="false">会保障你的信息安全，不会存储你的密码</string>
+    <string name="last_name" translatable="false">用户名（最多12个字符）</string>
+    <string name="last_pwd" translatable="false">输入密码</string>
+    <string name="last_repwd" translatable="false">再次输入密码</string>
+    <string name="login" translatable="false">登录/注册</string>
+    <string name="login_n" translatable="false">登录</string>
+    <string name="number_login" translatable="false">学号登录</string>
+    <string name="login_has" translatable="false">点击登录，即表示您已同意</string>
+    <string name="in_xieyi" translatable="false">《隐私协议》</string>
+    <string name="user_tiaokuan" translatable="false">《用户服务条款》</string>
+    <string name="bind_fun" translatable="false">手机号验证成功\n恭喜您获得50个棒棒糖奖励</string>
+    <string name="set_change_pwd" translatable="false">修改密码</string>
+    <string name="set_bind_phone" translatable="false">绑定手机</string>
+    <string name="set_msg" translatable="false">消息通知</string>
+    <string name="set_clear_cache" translatable="false">清理缓存</string>
+    <string name="set_about" translatable="false">关于我们</string>
+    <string name="set_message" translatable="false">消息提醒</string>
+    <string name="set_yinsi" translatable="false">隐私政策</string>
+    <string name="check_new_version_code" translatable="false">检查更新</string>
+    <string name="notify_message" translatable="false">新消息通知</string>
+    <string name="message_state" translatable="false">请在Android的"设置"-"通知"中进行修改</string>
+    <string name="set_ruler" translatable="false">社区规则</string>
+    <string name="set_idea" translatable="false">意见反馈</string>
+    <string name="set_loginout" translatable="false">退出登录</string>
+    <string name="set_add_phone" translatable="false">添加手机号</string>
+    <string name="set_change_phone" translatable="false">更换手机号</string>
+    <string name="set_infos" translatable="false">个人信息</string>
+    <string name="mine_joint" translatable="false">我参与的话题</string>
+    <string name="mine_hott" translatable="false">其他热门话题</string>
+    <string name="xupdate_title" translatable="false">发现新版本，是否升级</string>
+    <string name="upate_ha" translatable="false">发现新版本</string>
+    <string name="tishi" translatable="false">轻触拍照，长按摄像</string>
+    <string name="chat_bbt" translatable="false">棒棒糖</string>
+    <string name="upload_msg_xx" translatable="false">为确保APP的校园专属性和校园身份的真实性，我们需要您配合上传证明学生身份的证件照片，包括校园卡、学生证、录取通知书或其他证明</string>
+    <string name="upload_old_chirld" translatable="false">我是老用户，我记得学号和密码。</string>
+    <string name="upload_pic" translatable="false">请上传验证图片</string>
+    <string name="upload_hint_x1" translatable="false">请输入你的学号</string>
+    <string name="upload_hint_x2" translatable="false">请输入你的通知书编号</string>
+    <string name="upload_num_unname" translatable="false">我没有学号</string>
+    <string name="upload_num_name" translatable="false">有学号</string>
+    <string name="upload_xuh_c1" translatable="false">学号</string>
+    <string name="upload_xuh_c2" translatable="false">录取通知书编号</string>
+    <string name="upload_xshenc" translatable="false">我们会进行严格的人工审核，审核通过后第一时间通知您。</string>
+    <string name="up_ver" translatable="false">身份信息不完整哦，点击去验证身份～</string>
+    <string name="ver_fin_xm" translatable="false">您已成功上传，我们会尽快审核！\n审核结果我们将以短信形式通知您。</string>
+    <string name="verfing_ms" translatable="false">资料正在审核中～ \n审核结果我们将以短信形式通知您。</string>
+    <string name="first_msg" translatable="false">可赠送棒棒糖</string>
+    <string name="image_index" translatable="false">%1$d/%2$d</string>
+    <string name="blog_loca" translatable="false">你在哪？</string>
+    <string name="blog_tic" translatable="false">常用话题</string>
+    <string name="blog_wrtp" translatable="false">投票选项</string>
+    <string name="blog_hint_rtp" translatable="false">填写投票选项</string>
+    <string name="error_gif" translatable="false">长宽不小于 %1$dpx，且大小不超过 %2$sM。</string>
+    <string name="phone_val" translatable="false">1.所填信息必须与身份验证时提交的信息一致。\n2.使用通知书编号验证的用户，如若忘记通知书编号可以填写学校已分配的学工号码。\n3.学工号码必须真实有效，与学校备案信息一致，信息一旦提交，不可在此修改，请认真对待。</string>
+    <string name="tag_obj" translatable="false">"传递对象"</string>
+    <string name="tag_index" translatable="false">"传递下标"</string>
+
+
+    <string name="viewfinderview_status_text1" translatable="false">将二维码/条码放入取景框内</string>
+    <string name="viewfinderview_status_text2" translatable="false">即可自动扫描</string>
+    <string name="msg_camera_framework_bug" translatable="false">出问题啦~你可能需要重启</string>
+
+</resources>

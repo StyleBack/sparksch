@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/popwin_head_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.aigestudio.wheelpicker.WheelPicker
+            android:id="@+id/win_picker_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:wheel_atmospheric="true"
+            app:wheel_curtain="false"
+            app:wheel_curved="true"
+            app:wheel_indicator="true"
+            app:wheel_indicator_color="@color/grey_link"
+            app:wheel_item_text_size="18sp"
+            app:wheel_selected_item_text_color="@color/title_color"
+            app:wheel_indicator_size="1dp"
+            app:wheel_item_space="20dp"
+            app:wheel_visible_item_count="7" />
+        <com.aigestudio.wheelpicker.WheelPicker
+            android:id="@+id/win_picker_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:wheel_atmospheric="true"
+            app:wheel_curtain="false"
+            app:wheel_curved="true"
+            app:wheel_indicator="true"
+            app:wheel_indicator_color="@color/grey_link"
+            app:wheel_item_text_size="18sp"
+            app:wheel_selected_item_text_color="@color/title_color"
+            app:wheel_indicator_size="1dp"
+            app:wheel_item_space="20dp"
+            app:wheel_visible_item_count="7" />
+    </LinearLayout>
+</LinearLayout>

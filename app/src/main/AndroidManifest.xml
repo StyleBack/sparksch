@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.doschool.ahu">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission	android:name="android.permission.ACCESS_COARSE_LOCATION"	/>
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--弹窗-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!--//华为角标-->
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/SparkTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute">
+
+        <!--9.0的权限问题-->
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+        <!--适配全面屏手机-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+
+        <!--欢迎页-->
+        <activity
+            android:name=".WelActivity"
+            android:theme="@style/WelTheme"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--主界面-->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+
+        <!--引导页-->
+        <activity
+            android:name=".GuideActivity"
+            android:screenOrientation="portrait" />
+
+        <!--登录-->
+        <activity
+            android:name=".appui.reglogin.ui.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <!--个人详情-->
+        <activity
+            android:name=".appui.home.ui.activity.PersionalActivity"
+            android:screenOrientation="portrait" />
+
+        <!--微博详情-->
+        <activity
+            android:name=".appui.home.ui.activity.BlogDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!--设置-->
+        <activity
+            android:name=".appui.mine.ui.activity.SetActivity"
+            android:screenOrientation="portrait" />
+        <!--通知设置-->
+        <activity
+            android:name=".appui.mine.ui.activity.MessageNotifyActivity"
+            android:screenOrientation="portrait" />
+        <!--发动态-->
+        <!--新版发微博-->
+        <activity
+            android:name=".appui.writeblog.ui.activity.ReleaseMicroBlogAct"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!--常用话题-->
+        <activity
+            android:name=".appui.writeblog.ui.activity.AddCommonTopicAct"
+            android:screenOrientation="portrait" />
+
+        <!--地标-->
+        <activity
+            android:name=".appui.writeblog.ui.activity.LandMarkActivity"
+            android:screenOrientation="portrait" />
+
+        <!--at联系人-->
+
+        <!--at用户-->
+        <activity
+            android:name=".appui.writeblog.ui.activity.AtUserActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!--playvideo-->
+        <activity
+            android:name=".appui.main.ui.activity.PlayVideoActivity"
+            android:theme="@style/AppThemeFullscreen" />
+
+        <!--赞我的-->
+        <activity
+            android:name=".appui.infors.ui.activity.PraiseMeActivity"
+            android:screenOrientation="portrait" />
+
+        <!--关注   粉丝-->
+        <activity
+            android:name=".appui.mine.ui.activity.FansAttentionActivity"
+            android:screenOrientation="portrait" />
+
+        <!--收藏-->
+        <activity
+            android:name=".appui.mine.ui.activity.CollectedActivity"
+            android:screenOrientation="portrait" />
+
+        <!--个人中心话题-->
+        <activity
+            android:name=".appui.mine.ui.activity.MineTopicActivity"
+            android:screenOrientation="portrait" />
+
+        <!--拍摄视频-->
+        <activity
+            android:name=".appui.writeblog.ui.activity.CameraActivity"
+            android:theme="@style/AppThemeFullscreen" />
+
+        <!--热门动态-->
+        <activity
+            android:name=".appui.discover.ui.activity.HotBlogActivity"
+            android:screenOrientation="portrait" />
+
+        <!--头条新闻-->
+        <activity
+            android:name=".appui.discover.ui.activity.HeadLineActivity"
+            android:screenOrientation="portrait" />
+
+        <!--某个类型话题微博列表-->
+        <activity
+            android:name=".appui.discover.ui.activity.HotTopicListActivity"
+            android:screenOrientation="portrait" />
+
+        <!--搜索-->
+        <activity
+            android:name=".appui.main.ui.activity.SearchActivity"
+            android:screenOrientation="portrait" />
+
+        <!--搜索用户结果-->
+        <activity
+            android:name=".appui.main.ui.activity.SearchUserActivity"
+            android:screenOrientation="portrait" />
+
+        <!--搜索微博结果-->
+        <activity
+            android:name=".appui.main.ui.activity.SearchBlogActivity"
+            android:screenOrientation="portrait" />
+
+        <!--搜索话题结果-->
+        <activity
+            android:name=".appui.main.ui.activity.SearchTopicActivity"
+            android:screenOrientation="portrait" />
+
+        <!--web-->
+        <activity
+            android:name=".appui.main.ui.activity.WebActivity"
+            android:screenOrientation="portrait" />
+
+        <!--大图查看  待用-->
+        <activity
+            android:name=".appui.main.ui.activity.PhotoImageActivity"
+            android:screenOrientation="portrait" />
+
+        <!--预览图片-->
+        <activity
+            android:name=".appui.main.ui.activity.BrowseImageActivity"
+            android:screenOrientation="portrait" />
+
+        <!--修改密码-->
+        <activity
+            android:name=".appui.mine.ui.activity.ResertPwdActivity"
+            android:screenOrientation="portrait" />
+
+        <!--个人资料修改-->
+        <activity
+            android:name=".appui.main.ui.activity.PersonalDataActivity"
+            android:screenOrientation="portrait" />
+
+        <!--更改个人信息-->
+        <activity
+            android:name=".appui.main.ui.activity.ChangePersonalActivity"
+            android:screenOrientation="portrait" />
+
+        <!--举报-->
+        <activity
+            android:name=".appui.main.ui.activity.ReportActivity"
+            android:screenOrientation="portrait" />
+
+        <!--学工号登录-->
+        <activity
+            android:name=".appui.reglogin.ui.LoginAcademicActivity"
+            android:screenOrientation="portrait" />
+
+        <!--手机验证-->
+        <activity
+            android:name=".appui.main.ui.activity.BindPhoneActivity"
+            android:screenOrientation="portrait" />
+
+        <!--手机号验证成功-->
+        <activity
+            android:name=".appui.main.ui.activity.BindSuccActivity"
+            android:screenOrientation="portrait" />
+
+        <!--手机用户验证界面-->
+        <activity
+            android:name=".appui.main.ui.activity.UpLoadValidationActivity"
+            android:screenOrientation="portrait" />
+
+        <!--上传后的页面-->
+        <activity
+            android:name=".appui.main.ui.activity.UpLoadFinishActivity"
+            android:screenOrientation="portrait" />
+
+        <!--审核等待界面-->
+        <activity
+            android:name=".appui.main.ui.activity.VerifingActivity"
+            android:screenOrientation="portrait" />
+
+        <!--通知助手-->
+        <activity
+            android:name=".appui.infors.ui.activity.NotifyingAssistantAct"
+            android:screenOrientation="portrait" />
+
+        <!--更换手机号验证信息-->
+        <activity android:name=".appui.mine.ui.activity.ChangePhoneValActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--更换手机号-->
+        <activity android:name=".appui.mine.ui.activity.ChangePhoneActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--他人资料-->
+        <activity android:name=".appui.home.ui.activity.OtherSingleActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--分享图片生成-->
+        <activity android:name=".appui.main.ui.activity.ShareViewActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--二维码扫描-->
+        <activity android:name=".appui.qrcode.CaptureActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--图库选择权限处理-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public" />
+        </provider>
+
+        <!--IMService配置-->
+        <!-- 【必须】消息收发service -->
+        <service
+            android:name="com.tencent.qalsdk.service.QalService"
+            android:exported="true"
+            android:process=":QALSERVICE"/>
+        <service
+            android:name="com.tencent.qalsdk.service.QalAssistService"
+            android:exported="false"
+            android:process=":QALSERVICE"/>
+        <!-- 【必须】 离线消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.QALBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.broadcast.qal" />
+            </intent-filter>
+        </receiver>
+        <!-- 系统消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.core.NetConnInfoCenter"
+            android:process=":QALSERVICE">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+            <!-- ImSDK 3.0.2 后添加 -->
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.service.TASK_REMOVED" />
+            </intent-filter>
+        </receiver>
+        <!--友盟推送-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5aa0e4cdf43e4817c8000039" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="996abdcecf437ec7460d9b6ddf9330c8" />
+        <!-- Channel ID用来标识App的推广渠道，作为推送消息时给用户分组的一个维度。-->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="UMENG_ID" />
+
+        <activity
+            android:name=".appui.infors.chat.ui.AddFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appui.infors.chat.ui.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appui.infors.chat.ui.EditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appui.infors.chat.ui.ImagePreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appui.infors.chat.ui.ImageViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appui.infors.chat.ui.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appui.infors.chat.ui.VideoActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".base.BadgeService"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <!--百度ssp-->
+        <meta-data
+            android:name="BaiduMobAd_APP_ID"
+            android:value="ed7b8909" />
+        <!-- 如果targetSdkVersion设置值>=24，则强烈建议添加以下provider，否则会影响app变现效率 -->
+        <provider
+            android:name="com.baidu.mobads.openad.FileProvider"
+            android:authorities="${applicationId}.bd.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/bd_file_paths" />
+        </provider>
+        <!-- 非信息广告必须添加 -->
+        <activity
+            android:name="com.baidu.mobads.AppActivity"
+            android:configChanges="screenSize|keyboard|keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+    </application>
+
+</manifest>

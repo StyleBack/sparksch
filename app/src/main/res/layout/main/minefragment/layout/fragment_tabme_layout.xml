@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/tabme_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            app:layout_behavior="com.doschool.ahu.appui.home.widget.FixAppBarLayoutBehavior">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_collapseMode="pin">
+
+                    <ImageView
+                        android:id="@+id/tabme_ivbg"
+                        android:layout_width="match_parent"
+                        android:layout_height="255dp"
+                        android:background="@color/new_color"
+                        android:foreground="@color/for_trans"
+                        android:scaleType="centerCrop" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="70dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <RelativeLayout
+                            android:id="@+id/tabme_rl_hiv"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_centerHorizontal="true">
+
+                            <RelativeLayout
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/login_top_head">
+
+                                <ImageView
+                                    android:id="@+id/tabme_iv_head"
+                                    android:layout_width="95dp"
+                                    android:layout_height="95dp"
+                                    android:layout_centerInParent="true"
+                                    android:scaleType="centerCrop" />
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/tabme_iv_sex"
+                                android:layout_width="26dp"
+                                android:layout_height="13dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="2dp" />
+
+                            <ImageView
+                                android:id="@+id/tabme_iv_org"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_toLeftOf="@+id/tabme_rl_hiv"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/tabme_iv_zan"
+                                    android:layout_width="26dp"
+                                    android:layout_height="31dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@mipmap/single_group_icon"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/tabme_tvzn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="获赞"
+                                android:textColor="@color/white"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tabme_llbbt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/tabme_rl_hiv"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/tabme_v_bbt"
+                                    android:layout_width="26dp"
+                                    android:layout_height="31dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@mipmap/single_group_icon"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/tabme_tvbt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="棒棒糖"
+                                android:textColor="@color/white"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="235dp"
+                        android:background="@drawable/single_drw_bg"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:id="@+id/tabme_lfans"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tabme_tv_fans"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="0"
+                                    android:textColor="@color/title_color"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="粉丝"
+                                    android:textColor="@color/un_title_color"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@color/grey_link" />
+
+                            <LinearLayout
+                                android:id="@+id/tabme_lgz"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tabme_tv_gz"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="0"
+                                    android:textColor="@color/title_color"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="关注"
+                                    android:textColor="@color/un_title_color"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:background="@color/grey_link" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/tabme_tool"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin"
+                    app:title="@null">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="25dp"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/tabme_toolbar" />
+
+                        <View
+                            android:id="@+id/tabme_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <RelativeLayout
+                android:id="@+id/tabme_verrl"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/xin_med"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp"
+                    android:textColor="@color/new_color"
+                    android:layout_marginLeft="12dp"
+                    android:text="@string/up_ver"/>
+                <ImageView
+                    android:id="@+id/tabme_veriv"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="4dp"
+                    android:padding="14dp"
+                    android:src="@mipmap/ver_xicon"/>
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white">
+
+                <net.lucode.hackware.magicindicator.MagicIndicator
+                    android:id="@+id/tabme_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_centerHorizontal="true" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/grey_link" />
+            </RelativeLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/tabme_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:overScrollMode="never"/>
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

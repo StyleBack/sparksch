@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/topicBox_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/shape_standard_edittext_noborder"
+        android:focusable="false"
+        android:hint="参与话题#期末来了#"
+        android:paddingBottom="5dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="40dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/tab_unselect"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:layout_marginRight="47dp"
+        android:layout_alignParentRight="true"
+        android:background="@color/grey4"
+        android:layout_width="1dp"
+        android:layout_height="18dp" />
+
+    <ImageView
+        android:id="@+id/topicBox_chooseImage"
+        android:layout_width="27dp"
+        android:layout_height="28dp"
+        android:layout_alignEnd="@+id/topicBox_edittext"
+        android:layout_alignRight="@+id/topicBox_edittext"
+        android:layout_alignTop="@+id/topicBox_edittext"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="4dp"
+        android:src="@mipmap/icon_chat_image_normal" />
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp">
+
+    <ImageView
+        android:id="@+id/blog_dt_ivh"
+        android:layout_width="44dp"
+        android:layout_height="44dp" />
+
+    <LinearLayout
+        android:id="@+id/blog_dt_ll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/blog_dt_fun"
+        android:layout_toRightOf="@+id/blog_dt_ivh"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/blog_dt_tvname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/now_txt_color"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/blog_dt_ivfy"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="2.5dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/blog_dt_ll1"
+        android:layout_alignLeft="@+id/blog_dt_ll1"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/blog_dt_ivsex"
+            android:layout_width="26dp"
+            android:layout_height="13dp"
+            android:layout_marginRight="3dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/blog_dt_tvyx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/un_title_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/blog_dt_fun"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:background="@drawable/fun_bg"
+        android:src="@mipmap/icon_fun_black" />
+</RelativeLayout>

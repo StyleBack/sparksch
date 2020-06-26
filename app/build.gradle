@@ -1,0 +1,164 @@
+apply plugin: 'com.android.application'
+
+def config=rootProject.ext.android
+def apkConfig=rootProject.ext
+def androidConfig=rootProject.ext.androidDependencies
+def viewConfig=rootProject.ext.viewDependencies
+def dataConfig=rootProject.ext.dataDependencies
+def dataView=rootProject.ext.view
+
+android {
+    compileSdkVersion config.androidCompileSdkVersion
+    defaultConfig {
+        applicationId config.androidApplicationId
+        minSdkVersion config.androidMinSdkVersion
+        targetSdkVersion config.androidTargetSdkVersion
+        versionCode config.androidVersionCode
+        versionName config.androidVersionName
+        resValue(config.resString,config.resApp,config.resAppName)
+        //baseUrl
+        buildConfigField (config.baseString,config.baseKey,config.baseUrl)
+        multiDexEnabled true
+        packagingOptions{
+            exclude 'META-INF/rxjava.properties'
+        }
+
+        ndk {
+            // 需要将 x86 架构过滤掉
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"
+        }
+    }
+
+    signingConfigs{
+        release{
+            storeFile file("doBellKeyStoreFinal.keystore")
+            storePassword "dobell"
+            keyAlias "ahu"
+            keyPassword "dobell"
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            打包apk命名
+            android.applicationVariants.all {variant->
+                variant.outputs.all{
+                    outputFileName = apkConfig.apkName+config.androidVersionName+config.androidVersionCode+"-${releaseTime()}.apk"
+                }
+            }
+        }
+    }
+
+    //layout布局分类管理
+    sourceSets{
+        main{
+            res.srcDirs=dataView
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "8g"
+    }
+
+    //Add the following configuration配置
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+static def releaseTime(){
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+apply plugin: 'com.bugtags.library.plugin'
+bugtags {
+    //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考帮助中心->符号表->Android 符号表->配置自动上传符号表
+    appKey "22473196563051a1d102d79f0e637277 "  //这里是你的 appKey
+    appSecret "f2a2be2e45ebd6409590487ba1c8038c "    //这里是你的 appSecret，管理员在设置页可以查看
+    mappingUploadEnabled true
+}
+
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    //Android design设计包
+    api androidConfig.support_v7
+    api androidConfig.constraint_layout
+    api androidConfig.design
+    api androidConfig.support_v4
+    api androidConfig.cardview
+    //关联library
+    api project(':sdk')
+
+    //视图相关
+    api(viewConfig.glide) {
+        exclude group: 'com.android.support'
+    }
+    annotationProcessor viewConfig.glideAtp
+    api viewConfig.glideOKs
+    api viewConfig.rxpermission
+    api(viewConfig.matisse) {
+        exclude group: 'com.android.support'
+    }
+    api(viewConfig.statusbarutil) {
+        exclude group: 'com.android.support'
+    }
+    api viewConfig.rxbinding
+    api(viewConfig.swipe) {
+        exclude group: 'com.android.support'
+    }
+    api viewConfig.photoview
+    api viewConfig.spedit
+    api viewConfig.xtabMagic
+    api viewConfig.basePop
+    api viewConfig.ermxing
+    //数据相关
+    api dataConfig.multidex
+    api dataConfig.gson
+    api dataConfig.eventbus
+    api dataConfig.xrecyclerview
+    api dataConfig.xutils
+    api dataConfig.banner
+    api dataConfig.androidcodes
+    api dataConfig.xlog
+    api dataConfig.xmzpush
+    api dataConfig.rxjava
+    api dataConfig.rxandroid
+    api dataConfig.xleond
+    api dataConfig.wheelpick
+    api dataConfig.camerawheel
+    api (dataConfig.agentweb){
+        exclude group: 'com.android.support'
+    }
+    api (dataConfig.agentwebload){
+        exclude group: 'com.android.support'
+    }
+    api (dataConfig.agentwebfile){
+        exclude group: 'com.android.support'
+    }
+    api dataConfig.crash
+//    api dataConfig.ndks
+    api dataConfig.bugtags
+    //UMENGSdk
+    api dataConfig.common
+    api dataConfig.utdid
+    api dataConfig.push
+    //retrofit
+    api dataConfig.retrofit
+    api dataConfig.convertergson
+    api dataConfig.adapter
+    api dataConfig.logansquare
+
+    api dataConfig.badges
+}

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey_link"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:id="@+id/pp_timell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp">
+        <TextView
+            android:id="@+id/pp_tvday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/title_color"
+            android:textSize="20sp"
+            android:text="12"/>
+        <TextView
+            android:id="@+id/pp_tvym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/un_title_color"
+            android:textSize="14sp"
+            android:text="2018.09"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <View
+            android:layout_width="1dp"
+            android:layout_height="28dp"
+            android:background="@color/timeline_color"/>
+        <RelativeLayout
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:background="@drawable/dot_half">
+            <View
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/dot_focus"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/timeline_color"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/pp_rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="10dp"
+        android:padding="12dp"
+        android:background="@drawable/person_item_bg">
+        <TextView
+            android:id="@+id/pp_tvcontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/title_color"
+            android:maxEms="100"
+            android:ellipsize="end"
+            android:autoLink="web"
+            android:text="@string/empty_text"/>
+
+        <RelativeLayout
+            android:id="@+id/pp_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pp_tvcontent"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+            <com.doschool.ahu.widget.nine.NineImageView
+                android:id="@+id/pp_nine_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+            <include layout="@layout/person_item_video"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/pp_tvtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/un_title_color"
+            android:textSize="12sp"
+            android:layout_below="@+id/pp_rl"
+            android:layout_marginTop="10dp"
+            android:text="2018-09-12"/>
+    </RelativeLayout>
+
+</LinearLayout>

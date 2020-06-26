@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal">
+    <ImageView
+        android:layout_width="181dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="100dp"
+        android:src="@mipmap/bind_fun_icon"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/title_color"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="@string/bind_fun"/>
+
+    <TextView
+        android:id="@+id/bind_suctv"
+        android:layout_width="191dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_login_btn"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="确定"/>
+</LinearLayout>

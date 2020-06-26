@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+    <include layout="@layout/toolbar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/academic_icon"/>
+
+    <EditText
+        android:id="@+id/acd_ex_num"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_login_edit"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/login_edit"
+        android:hint="@string/acd_login_name"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:digits="@string/txt_inputType"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/acd_ex_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_login_edit"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/login_edit"
+        android:hint="@string/acd_login_pwd"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textSize="14sp"/>
+
+    <com.doschool.ahu.widget.ActionButton2
+        android:id="@+id/acd_btn_login"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="@string/login_n" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/un_title_color"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:text="@string/acd_tv_st"/>
+    </RelativeLayout>
+
+</LinearLayout>

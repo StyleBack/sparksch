@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/cb_iv_smil"
+            android:layout_width="49dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@drawable/selector_button_chatbox_emotion" />
+        <EditText
+            android:id="@+id/cb_ex"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_toRightOf="@+id/cb_iv_smil"
+            android:layout_toLeftOf="@+id/cb_send"
+            android:background="@drawable/bg_edit"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:textColor="@color/dove_color"
+            android:textSize="14sp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"/>
+        <TextView
+            android:id="@+id/cb_send"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:background="@drawable/bg_tv_comm"
+            android:textColor="@color/white"
+            android:text="评论"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line"/>
+
+    <com.doschool.ahu.widget.EmojLayout2
+        android:id="@+id/cb_emlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone"/>
+
+</LinearLayout>

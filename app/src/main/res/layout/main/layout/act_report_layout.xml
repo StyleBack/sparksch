@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/rep_rltype"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_set_item"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+                <TextView
+                    android:id="@+id/rep_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:textColor="@color/title_color"
+                    android:gravity="center"
+                    android:text="举报类型："/>
+
+                <TextView
+                    android:id="@+id/rep_txtype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:textColor="@color/un_title_color"
+                    android:layout_toLeftOf="@+id/rep_iv1"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/rep_t"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"/>
+
+                <ImageView
+                    android:id="@+id/rep_iv1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/icon_arrow_into"/>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/rep_ex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/write_bg"
+                android:layout_margin="10dp"
+                android:gravity="top"
+                android:inputType="none"
+                android:lines="5"
+                android:padding="5dp"
+                android:maxLength="100"
+                android:textSize="14sp"
+                android:hint="请输入内容（100字以内）"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

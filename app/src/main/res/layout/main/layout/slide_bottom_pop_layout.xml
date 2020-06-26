@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/slide_one_actv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="15sp"
+        android:textColor="@color/tab_count"
+        android:gravity="center"
+        android:background="@drawable/slide_pop_bg"
+        android:text="举报"/>
+
+    <TextView
+        android:id="@+id/slide_cancle_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="15sp"
+        android:textColor="@color/un_title_color"
+        android:gravity="center"
+        android:background="@drawable/slide_pop_bg"
+        android:layout_marginTop="10dp"
+        android:text="取消"/>
+</LinearLayout>

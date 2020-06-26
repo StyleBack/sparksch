@@ -1,0 +1,149 @@
+
+ext{
+    //Android
+    supportLibraryVersion='27.1.1'
+    constraintLayout='1.1.2'
+    apkName="SparkAn"
+
+    //项目配置
+    android=[
+            androidApplicationId:     "com.doschool.ahu",
+            androidCompileSdkVersion: 27,
+            androidMinSdkVersion:     17,
+            androidTargetSdkVersion:  27,
+            androidVersionCode:       125,
+            androidVersionName:       "4.9.5",
+
+            //resValue app_name--------修改处
+            resString:  "string",
+            resApp:     "app_name",
+            resAppName: "口袋小安",
+
+            //请求地址
+            baseString: "String",
+            baseKey:    "BASE_URL",
+            baseUrl:    '"https://ssc.dobell.me/ssc/"',
+    ]
+
+    //android依赖配置
+    androidDependencies=[
+            constraint_layout: "com.android.support.constraint:constraint-layout:${constraintLayout}",
+            support_v7:        "com.android.support:appcompat-v7:${supportLibraryVersion}",
+            support_v4:        "com.android.support:support-v4:${supportLibraryVersion}",
+            design:            "com.android.support:design:${supportLibraryVersion}",
+            cardview:          "com.android.support:cardview-v7:${supportLibraryVersion}"
+    ]
+
+    //layout
+    view=[
+            //通用title
+            'src/main/res/layout/common',
+            //主界面
+            'src/main/res/layout/main',
+            //广场
+            'src/main/res/layout/main/homefragment',
+            //沟通
+            'src/main/res/layout/main/commfragment',
+            //发布
+            'src/main/res/layout/main/releasefragment',
+            //发现
+            'src/main/res/layout/main/findfragment',
+            //我
+            'src/main/res/layout/main/minefragment',
+            //登录注册...
+            'src/main/res/layout/reglogin',
+            //欢迎页
+            'src/main/res/layout/wel',
+            //引导页
+            'src/main/res/layout/guide',
+            //必须写   需要放到最后
+            'src/main/res/layout',
+            'src/main/res'
+    ]
+
+    //view依赖配置
+    viewDependencies=[
+            //glide-v4.0 图片加载库
+            glide: "com.github.bumptech.glide:glide:4.7.1",
+            glideAtp: "com.github.bumptech.glide:compiler:4.7.1",
+            glideOKs:"com.github.bumptech.glide:okhttp3-integration:4.7.1",
+            //请求权限库
+            rxpermission: "com.github.tbruyelle:rxpermissions:0.10.2",
+            //知乎图片库
+            matisse: "com.zhihu.android:matisse:0.5.2-beta4",
+            //状态栏
+            statusbarutil: "com.jaeger.statusbarutil:library:1.5.1",
+            //对view的事件以及一些设置
+            rxbinding: "com.jakewharton.rxbinding2:rxbinding:2.1.1",
+            //swipelayout 侧滑删除 置顶
+            swipe: "com.github.anzaizai:EasySwipeMenuLayout:1.1.4",
+            //photoview查看大图
+            photoview:"com.github.chrisbanes:PhotoView:2.1.4",
+            //edittext能出入表情  @等功能
+            spedit:"com.github.sunhapper:SpEditTool:0.2.3",
+            //tablayout
+            xtabMagic:"com.github.hackware1993:MagicIndicator:1.5.0",
+            //popup
+            basePop:"com.github.razerdp:BasePopup:2.1.7",
+            //二维码生成
+            ermxing:"com.google.zxing:core:3.3.3"
+
+    ]
+
+    //data依赖配置
+    dataDependencies=[
+            //mult规避 64K 限制,文件分包
+            multidex: "com.android.support:multidex:1.0.3",
+            //gson解析
+            gson: "com.google.code.gson:gson:2.8.5",
+            //event事件分发处理
+            eventbus: "org.greenrobot:eventbus:3.1.1",
+            //xrecycler刷新加载
+            xrecyclerview: "com.jcodecraeer:xrecyclerview:1.5.9",
+            //网络框架
+            xutils :"org.xutils:xutils:3.5.0",
+            //banner
+            banner: "com.youth.banner:banner:1.4.10",
+            //各大工具类  act管理  app管理  加密等等。。。。
+            androidcodes:"com.blankj:utilcode:1.22.0",
+            //log
+            xlog:"com.orhanobut:logger:2.2.0",
+            //魅族推送
+            xmzpush:"com.meizu.flyme.internet:push-internal:3.6.3@aar",
+            //异步
+            rxjava:"io.reactivex.rxjava2:rxjava:2.1.1",
+            rxandroid:"io.reactivex.rxjava2:rxandroid:2.0.1",
+            //点赞效果动画  1.3.2不是最新远程仓库（有限制）  下载关联包---最新
+            xleond:"com.plattysoft.leonids:LeonidsLib:1.3.2",
+            //wheel
+            wheelpick:"cn.aigestudio.wheelpicker:WheelPicker:1.1.2",
+            //摄像录制视频
+            camerawheel:"cjt.library.wheel:camera:1.1.9",
+            //agentweb加载
+            agentweb:"com.just.agentweb:agentweb:4.0.2",
+            agentwebload:"com.just.agentweb:download:4.0.2",
+            agentwebfile:"com.just.agentweb:filechooser:4.0.2",
+            //bugly集成
+            crash:"com.tencent.bugly:crashreport:latest.release",
+//            ndks:"com.tencent.bugly:nativecrashreport:latest.release"
+            //bugtags
+            bugtags:"com.bugtags.metrics:bugtags-lib:latest.integration",
+            //PushSDK必须依赖基础组件库，所以需要加入对应依赖
+            common: "com.umeng.sdk:common:1.5.3",
+            //PushSDK必须依赖utdid库，所以需要加入对应依赖
+            utdid: "com.umeng.sdk:utdid:1.1.5.3",
+            //PushSDK
+            push: "com.umeng.sdk:push:4.2.0",
+            //retrofit
+
+            retrofit:"com.squareup.retrofit2:retrofit:2.1.0",
+            convertergson:"com.squareup.retrofit2:converter-gson:2.1.0",
+            adapter:"com.squareup.retrofit2:adapter-rxjava:2.1.0",
+            logansquare:"com.github.aurae.retrofit2:converter-logansquare:1.3.0",
+
+            //角标
+            badges:"com.github.whytot:BadgeForAppIcon:v1.0.0-beta.2",
+
+    ]
+
+}

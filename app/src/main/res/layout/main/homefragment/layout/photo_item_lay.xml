@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="122dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="12dp">
+        <ImageView
+            android:id="@+id/pil_iv"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:scaleType="centerCrop"
+            />
+        <ImageView
+            android:id="@+id/pil_play"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:src="@drawable/play_player"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/pil_delete"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/box_delet_icon"/>
+</RelativeLayout>

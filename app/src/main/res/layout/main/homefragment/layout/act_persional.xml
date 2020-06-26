@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_link">
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/person_xrv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+        <include layout="@layout/person_toolbar"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/person_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/white"/>
+        <include layout="@layout/person_toolbar1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pa_ll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp">
+        <LinearLayout
+            android:id="@+id/add_ll_zg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/bg_login_btn">
+            <ImageView
+                android:id="@+id/add_guzu_iv"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/add_guzu_icon"/>
+            <TextView
+                android:id="@+id/pa_tv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:text="加关注"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/pa_iv_bbt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:src="@mipmap/bangbang_icon"/>
+        <LinearLayout
+            android:id="@+id/add_ly_il"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/bg_login_btn">
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:src="@mipmap/add_layi_icon"/>
+            <TextView
+                android:id="@+id/pa_tv_go"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:text="聊一聊"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/child_rl">
+
+    <ImageView
+        android:id="@+id/child_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp" />
+    <TextView
+        android:id="@+id/child_tvname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/un_title_color"
+        android:textSize="14sp"
+        android:layout_marginTop="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/child_icon"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+    <View
+        android:id="@+id/child_view"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_toRightOf="@+id/child_icon"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="3dp"
+        android:visibility="gone"
+        android:background="@drawable/msg_dot_icon"/>
+    <TextView
+        android:id="@+id/child_xin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/msg_dot_color"
+        android:textSize="12sp"
+        android:layout_toRightOf="@+id/child_icon"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="3dp"
+        android:visibility="gone"
+        android:text="新"/>
+</RelativeLayout>
